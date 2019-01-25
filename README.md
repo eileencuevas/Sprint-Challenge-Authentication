@@ -72,7 +72,7 @@ Helpful Tip on Testing this Project:
 
 - [x] Implement the `register` function inside `/config/routes.js`.
 - [x] Implement the `login` function inside `/config/routes.js`.
-- [ ] Use JSON Web Tokens for authentication.
+- [x] Use JSON Web Tokens for authentication.
 
 **Note** The migrations and a database with empty users is already included
 
