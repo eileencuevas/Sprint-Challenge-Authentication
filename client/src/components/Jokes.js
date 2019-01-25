@@ -6,6 +6,16 @@ const JokesContainer = styled.div`
     margin: 2rem auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+`
+
+const EmptyContainer = styled(JokesContainer)`
+    flex-direction: column;
+    
+    p {
+        margin: 1rem 0;
+    }
 `
 
 const IndividualJoke = styled.p`
@@ -20,7 +30,7 @@ const IndividualJoke = styled.p`
 `
 
 const Jokes = props => {
-   if (props.jokes) {
+   if (props.jokes.length > 0) {
         return(
             <JokesContainer>
                 {props.jokes.map(joke => {
@@ -30,7 +40,10 @@ const Jokes = props => {
         );
    } else {
        return (
-           <JokesContainer>No Jokes Available :(</JokesContainer>
+           <EmptyContainer>
+               <p>No Jokes Available :(</p>
+               <p>Why don't you log in?</p>
+           </EmptyContainer>
        );
    }
 }
